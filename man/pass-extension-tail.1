@@ -1,0 +1,57 @@
+.TH pass-extension-tail 1 "2017 April 24" "Version 1.0.0" "User Commands"
+
+.SH NAME
+pass-extension-tail - a password-store extension to avoid printing the password
+
+.SH SYNOPSIS
+.B pass
+tail
+[
+.I pass-name
+]
+.br
+.B pass
+tailedit
+[
+.I pass-name
+]
+
+.SH DESCRIPTION
+
+.BR pass(1)
+proposes a format to store meta data in the password file.
+The password is stored in the first line followed by data like the URL, username and other meta data in the following lines.
+.B pass-extension-tail
+is an extension for the 
+.BR pass(1)
+that allows users to display and edit password meta data without displaying the password itself to bystanders.
+
+.SH COMMANDS
+.TP
+\fBtail\fP \fIpass-name\fP 
+.br
+Display the whole password file except for the first line. This allows users to inspect the meta data on the console without displaying the password in plain text.
+.TP
+\fBtailedit\fP \fIpass-name\fP
+Open the password file in the editor omitting the first line. When saving the first line is prepended.
+
+.SH SEE ALSO
+.BR pass (1)
+
+.SH AUTHOR
+palortoff
+
+
+.SH HOME
+.I https://github.com/palortoff/pass-extension-tail
+
+
+.SH REPORTING BUGS
+.I https://github.com/palortoff/pass-extension-tail/issues
+
+.SH LICENSE
+Copyright \(co 2017 palortoff.
+.PP
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
+.br
+This is free software: you are free to change and redistribute it. There is NO WARRANTY, to the extent permitted by law.
