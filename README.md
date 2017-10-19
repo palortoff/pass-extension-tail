@@ -2,14 +2,14 @@
 
 An extension for the [password store](https://www.passwordstore.org/) that allows to display and edit password meta data without displaying the password itself to bystanders.
 
-[password store](https://www.passwordstore.org/) proposes a format to store meta data in the password file. The password is stored in the first line followed by  data like the URL, username and other meta data in the following lines. A common password file would like this:
+[password store](https://www.passwordstore.org/) proposes a format to store meta data in the password file. The password is stored in the first line followed by data like the URL, username and other meta data in the following lines. A common password file would look like this:
 ```
 Yw|ZSNH!}z"6{ym9pI
 URL: *.amazon.com/*
 Username: AmazonianChicken@example.com
 ```
 
-A common use case is to copy the first line, the password using `pass show -c <password file>`.
+A common use case is to copy the first line, the password, using `pass show -c <password file>`.
 
 The meta data usually cannot be copied but needs to be displayed as it contains type and value.
 
