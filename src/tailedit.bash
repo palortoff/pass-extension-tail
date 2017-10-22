@@ -4,9 +4,10 @@
 
 local path="${1%/}"
 check_sneaky_paths "$path"
-mkdir -p -v "$PREFIX/$(dirname "$path")"
-set_gpg_recipients "$(dirname "$path")"
+mkdir -p -v "$PREFIX/$(dirname -- "$path")"
+set_gpg_recipients "$(dirname -- "$path")"
 local passfile="$PREFIX/$path.gpg"
+set_git "$passfile"
 
 tmpdir #Defines $SECURE_TMPDIR
 local tmp_file="$(mktemp -u "$SECURE_TMPDIR/XXXXXX")-${path//\//-}.txt"
