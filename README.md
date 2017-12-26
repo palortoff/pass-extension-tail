@@ -26,6 +26,16 @@ Username: AmazonianChicken@example.com
 
 `pass tailedit <password file>` opens the password file in the editor omitting the first line. When saving the first line is prepended.
 
+## pass tailvalue
+
+`pass tailvalue <password file> <key>` displays the "value" associated with `<key>` from the specified password file. This allows discretely retrieving values of the meta data.
+
+```
+$ pass tailvalue <password file> Username
+AmazonianChicken@example.com
+```
+
+
 ## Installation
 
 - Enable password-store extensions by setting ``PASSWORD_STORE_ENABLE_EXTENSIONS=true``
