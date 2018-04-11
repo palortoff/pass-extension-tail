@@ -29,7 +29,7 @@ Username: AmazonianChicken@example.com
 ## Installation
 
 - Enable password-store extensions by setting ``PASSWORD_STORE_ENABLE_EXTENSIONS=true``
-- Add this repo as a submodule to your password store and create a symlink to `tail.bash` and `tailedit.bash` in `~/password-store/.extensions`
+- Add this repo as a submodule to your password store and create a symlink to `tail.bash` and `tailedit.bash` in `~/.password-store/.extensions`
 
 ## Contribution
 
