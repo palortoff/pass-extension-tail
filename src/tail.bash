@@ -1,7 +1,7 @@
 #!/bin/bash
 
-local path="$1"
-local passfile="$PREFIX/$path.gpg"
+path="$1"
+passfile="$PREFIX/$path.gpg"
 check_sneaky_paths "$path"
 
 if [[ -f $passfile ]]; then
