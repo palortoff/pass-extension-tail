@@ -1,0 +1,10 @@
+PASSWORD_STORE_EXTENSION_COMMANDS+=(tail)
+PASSWORD_STORE_EXTENSION_COMMANDS+=(tailedit)
+
+__password_store_extension_complete_tail() {
+    _pass_complete_entries 1
+}
+
+__password_store_extension_complete_tailedit() {
+    _pass_complete_entries 1
+}
