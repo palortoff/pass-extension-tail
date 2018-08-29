@@ -29,15 +29,18 @@ Username: AmazonianChicken@example.com
 ## Installation
 
 - Enable password-store extensions by setting ``PASSWORD_STORE_ENABLE_EXTENSIONS=true``
-- Add this repo as a submodule to your password store and create a symlink to `tail.bash` and `tailedit.bash` in `~/.password-store/.extensions`
+- ``make install``
+- alternatively add `tail.bash` and `tailedit.bash` to your extension folder (by default at `~/.password-store/.extensions`)
 
 ## Completion
 
-pass completion currently does not support extensions.
+This extensions comes with the extension bash completion support added with password-store version 1.7.3
 
-To add completion in bash edit `pass.bash-completion` use this workaround:
-- add `tail` and `tailedit` to the list of commands (`local commands=`...)
-- add `tail` and `tailedit` to the handler for the edit command (`ls|list|edit)`)
+When installed, bash completion is already installed. Alternatively source `completion/pass-tail.bash.completion`
+
+fish and zsh completion are not available, feel free to contribute.
+
+For bash completion prior to password-store 1.7.3 see [old documentation](https://github.com/palortoff/pass-extension-tail/blob/42c6a182fd4c2b68be21af0dc6ed40fda188da12/README.md)
 
 ## Contribution
 
