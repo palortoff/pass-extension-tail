@@ -20,6 +20,7 @@ install:
 	@install -v -d "$(DESTDIR)$(SYSTEM_EXTENSION_DIR)/"
 	@install -v -m0755 src/tail.bash "$(DESTDIR)$(SYSTEM_EXTENSION_DIR)/tail.bash"
 	@install -v -m0755 src/tailedit.bash "$(DESTDIR)$(SYSTEM_EXTENSION_DIR)/tailedit.bash"
+	@install -v -m0755 src/tailclip.bash "$(DESTDIR)$(SYSTEM_EXTENSION_DIR)/tailclip.bash"
 	@install -v -d "$(DESTDIR)$(BASHCOMPDIR)/"
 	@install -v -m 644 completion/pass-tail.bash.completion  "$(DESTDIR)$(BASHCOMPDIR)/pass-tail"
 	@echo
@@ -30,11 +31,13 @@ uninstall:
 	@rm -vrf \
 		"$(DESTDIR)$(SYSTEM_EXTENSION_DIR)/tail.bash" \
 		"$(DESTDIR)$(SYSTEM_EXTENSION_DIR)/tailedit.bash" \
+		"$(DESTDIR)$(SYSTEM_EXTENSION_DIR)/tailclip.bash" \
 		"$(DESTDIR)$(MANDIR)/man1/pass-tail.1" \
 		"$(DESTDIR)$(BASHCOMPDIR)/pass-tail"
 
 lint:
 	shellcheck -s bash src/tail.bash
 	shellcheck -s bash src/tailedit.bash
+	shellcheck -s bash src/tailclip.bash
 
 .PHONY: install uninstall lint

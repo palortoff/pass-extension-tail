@@ -26,6 +26,10 @@ Username: AmazonianChicken@example.com
 
 `pass tailedit <password file>` opens the password file in the editor omitting the first line. When saving the first line is prepended.
 
+## pass tailclip
+
+`pass tailclip <password file>` displays the whole password file except for the first line (like `pass tail`), but also copies the first line to the clipboard (like `pass show -c <password file>`).
+
 ## Installation
 
 - Enable password-store extensions by setting ``PASSWORD_STORE_ENABLE_EXTENSIONS=true``
