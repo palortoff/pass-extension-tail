@@ -15,6 +15,12 @@ tailedit
 [
 .I pass-name
 ]
+.br
+.B pass
+tailclip
+[
+.I pass-name
+]
 
 .SH DESCRIPTION
 
@@ -34,6 +40,9 @@ Display the whole password file except for the first line. This allows users to 
 .TP
 \fBtailedit\fP \fIpass-name\fP
 Open the password file in the editor omitting the first line. When saving the first line is prepended.
+.TP
+\fBtailclip\fP \fIpass-name\fP
+Display the whole password file except for the first line, and copy the first line to the clipboard. This is equivalent to the combination of \fBpass show -c\fP \fIpass-name\fP and \fBpass tail\fP \fIpass-name\fP
 
 .SH SEE ALSO
 .BR pass (1)
