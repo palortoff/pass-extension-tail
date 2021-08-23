@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 [[ $# -ne 1 ]] && die "Usage: $PROGRAM $COMMAND pass-name"
 
