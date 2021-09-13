@@ -21,7 +21,7 @@ install:
 	@install -v -m0755 src/tail.bash "$(DESTDIR)$(SYSTEM_EXTENSION_DIR)/tail.bash"
 	@install -v -m0755 src/tailedit.bash "$(DESTDIR)$(SYSTEM_EXTENSION_DIR)/tailedit.bash"
 	@install -v -d "$(DESTDIR)$(BASHCOMPDIR)/"
-	@install -v -m 644 completion/pass-tail.bash.completion  "$(DESTDIR)$(BASHCOMPDIR)/pass-tail"
+	@install -v -m 644 completion/pass-tail.bash.completion "$(DESTDIR)$(BASHCOMPDIR)/pass-tail"
 	@echo
 	@echo "pass-tail is installed successfully"
 	@echo

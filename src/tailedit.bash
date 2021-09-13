@@ -12,10 +12,9 @@ set_git "$passfile"
 tmpdir #Defines $SECURE_TMPDIR
 tmp_file="$(mktemp -u "$SECURE_TMPDIR/XXXXXX")-${path//\//-}.txt"
 
-
 action="Add"
 if [[ -f $passfile ]]; then
-    $GPG -d  "${GPG_OPTS[@]}" "$passfile" | tail -n +2 > "$tmp_file" || exit 1
+    $GPG -d "${GPG_OPTS[@]}" "$passfile" | tail -n +2 > "$tmp_file" || exit 1
     action="Edit"
 fi
 ${EDITOR:-vi} "$tmp_file"
@@ -24,7 +23,7 @@ $GPG -d -o - "${GPG_OPTS[@]}" "$passfile" 2>/dev/null | tail -n +2 | diff - "$tm
 
 tmp_file_joined="$(mktemp -u "$SECURE_TMPDIR/XXXXXX")-${path//\//-}.txt"
 
-$GPG -d  "${GPG_OPTS[@]}" "$passfile" | head -n 1 > "$tmp_file_joined"
+$GPG -d "${GPG_OPTS[@]}" "$passfile" | head -n 1 > "$tmp_file_joined"
 cat "$tmp_file" >> "$tmp_file_joined"
 
 while ! $GPG -e "${GPG_RECIPIENT_ARGS[@]}" -o "$passfile" "${GPG_OPTS[@]}" "$tmp_file_joined"; do
