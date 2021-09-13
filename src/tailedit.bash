@@ -2,7 +2,7 @@
 
 [[ $# -ne 1 ]] && die "Usage: $PROGRAM $COMMAND pass-name"
 
-path="${1%/}"
+path=${1%/}
 check_sneaky_paths "$path"
 mkdir -p -v "$PREFIX/$(dirname -- "$path")"
 set_gpg_recipients "$(dirname -- "$path")"

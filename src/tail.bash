@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-path="$1"
+path=$1
 passfile="$PREFIX/$path.gpg"
 check_sneaky_paths "$path"
 
