@@ -23,7 +23,7 @@ install:
 	@install -v -d "$(DESTDIR)$(BASHCOMPDIR)/"
 	@install -v -m 644 completion/pass-tail.bash.completion  "$(DESTDIR)$(BASHCOMPDIR)/pass-tail"
 	@echo
-	@echo "pass-tail is installed succesfully"
+	@echo "pass-tail is installed successfully"
 	@echo
 
 uninstall:
