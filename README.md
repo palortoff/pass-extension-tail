@@ -22,6 +22,8 @@ URL: *.amazon.com/*
 Username: AmazonianChicken@example.com
 ```
 
+The `--clip` / `-c` options will copy the first line of the password file to the clipboard for 45 seconds.
+
 ## pass tailedit
 
 `pass tailedit <password file>` opens the password file in the editor omitting the first line. When saving the first line is prepended.
